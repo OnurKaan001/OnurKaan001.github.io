@@ -27,7 +27,7 @@ body {
     margin-top: 5rem;
 }
 
-nav {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@ nav {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav .logo {
+.navbar .logo {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--white);
@@ -52,13 +52,13 @@ nav .logo {
     align-items: center;
 }
 
-nav .logo img {
+.navbar .logo img {
     width: 40px;
     height: 40px;
     margin-right: 0.5rem;
 }
 
-nav .logo h4 {
+.navbar .logo h4 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--white);
@@ -86,6 +86,11 @@ nav .logo h4 {
 .nav-list .nav-item a:hover,
 .nav-list .nav-item a.active {
     color: var(--blue);
+}
+
+.close-nav {
+    position: absolute !important;
+    right: 0;
 }
 
 .container {
@@ -187,7 +192,8 @@ nav .logo h4 {
 
 .projects .card {
     gap: 1rem;
-    min-width: 300px;
+    min-width: 400px;
+    max-width: 400px;
 }
 
 .contact {
@@ -239,8 +245,37 @@ nav .logo h4 {
     }
 }
 
+@media (max-width:768px) {
+    .navbar {
+        display: none;
+    }
+
+    body {
+        margin-top: 0;
+    }
+
+    .container {
+        margin: 0 1rem 2rem 1rem;
+        padding: 0;
+    }
+
+    .cards {
+        margin: 0 1rem 2rem 1rem;
+        padding: 0;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .projects .card {
+        min-width: 100%;
+    }
+}
+
 @media (min-width: 1024px) {
     .container {
         margin: 0 4rem 2rem 4rem;
     }
 }
+
